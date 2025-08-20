@@ -20,9 +20,10 @@ body{
     background: linear-gradient(58deg, var(--primary-color) 0%, var(--secoundery-color) 100%);
 }
 
-.content{
+.container{
     height: 500px;
     width: 500px;
+    border: 2px solid black;
 }
 
 .hundred, .info, .zero1, .zero2 {
@@ -38,15 +39,44 @@ body{
 .one, .detail{
     background-color: var(--white);
     border-radius: 5px;
-    border: 2px solid red;
     filter: drop-shadow(1px 1px 9px var(--shadow-color));
 }
 .one {
-    width: 20px;
-    height: 80px;
+    width: 10%;
+    height: 80%;
     position: relative;
     left: 6%;
     z-index: 3;
-   
+}
+.detail {
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    transform: rotate(50deg);
+    left: 5%;
+    top: 12%;
+}
 
+.zero1, .zero2 {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    border: 40px solid var(--white);
+    filter: drop-shadow(10px 1px 9px var(--shadow-color));
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.zero1 {
+    right: -3%;
+    z-index: 2;
+}
+.zero2 {
+    left: -3%;
+    z-index: 1;
+}
+.info {
+    display: flex;
+    flex-direction: column;
 }
